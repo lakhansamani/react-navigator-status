@@ -3,10 +3,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist", "src"],
   "engines": {
     "node": ">=10"
   },
@@ -36,7 +33,8 @@
     "trailingComma": "es5"
   },
   "name": "react-navigator-status",
-  "author": "Lakhan Samani",
+  "author": "Lakhan Samani <lakhan.m.samani@gmail.com>",
+  "repository": "https://github.com/lakhansamani/react-navigator-status.git",
   "module": "dist/react-navigator-status.esm.js",
   "size-limit": [
     {
