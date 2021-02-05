@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Default as NavigatorStatus } from '../stories/NavigatorStatus.stories';
+import { NavigatorStatus } from '../src';
 
 describe('NavigatorStatus', () => {
   it('renders without crashing', () => {
