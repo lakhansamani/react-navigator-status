@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Meta, Story } from '@storybook/react';
-import { NavigatorStatus } from '../src';
+import { NavigatorStatus, useNavigatorStatus } from '../src';
 
 const meta: Meta = {
   title: 'Navigator Status',
@@ -74,5 +74,13 @@ const CustomComponentStory: Story = () => (
 );
 
 export const WithCustomComponent = CustomComponentStory.bind({});
+
+const CustomComponentStoryWithHook: Story = () => {
+  const isOnline = useNavigatorStatus();
+
+  return <Alert isOnline={isOnline} />;
+};
+
+export const WithHook = CustomComponentStoryWithHook.bind({});
 
 Default.args = {};

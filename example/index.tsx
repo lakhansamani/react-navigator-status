@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { NavigatorStatus } from '../.';
+import { useNavigatorStatus } from '../.';
 
 const Alert: React.FC<{ isOnline: boolean }> = ({ isOnline }) => {
   const [showAlert, setShowAlert] = React.useState(false);
@@ -56,11 +56,10 @@ const Alert: React.FC<{ isOnline: boolean }> = ({ isOnline }) => {
 };
 
 const App = () => {
+  const isOnline = useNavigatorStatus();
   return (
     <div>
-      <NavigatorStatus>
-        {({ isOnline }) => <Alert isOnline={isOnline} />}
-      </NavigatorStatus>
+      <Alert isOnline={isOnline} />
     </div>
   );
 };

@@ -12,7 +12,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export const hasWindowObj = () => typeof window !== 'undefined';
 
-export const NavigatorStatus: FC<Props> = ({ children }) => {
+export const useNavigatorStatus = () => {
   const [isOnline, setIsOnline] = useState(
     hasWindowObj() ? window.navigator.onLine : true
   );
@@ -58,6 +58,12 @@ export const NavigatorStatus: FC<Props> = ({ children }) => {
       }
     };
   }, []);
+
+  return isOnline;
+};
+
+export const NavigatorStatus: FC<Props> = ({ children }) => {
+  const isOnline = useNavigatorStatus();
 
   return (
     <div>
