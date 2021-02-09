@@ -9,10 +9,8 @@ const Alert: React.FC<{ isOnline: boolean }> = ({ isOnline }) => {
   React.useEffect(() => {
     let isMounted = true;
 
-    if (isOnline && showAlert) {
-      if (isMounted) {
-        setShowAlert(true);
-      }
+    if (isOnline && showAlert && isMounted) {
+      setShowAlert(true);
 
       setTimeout(() => {
         if (isMounted) {
