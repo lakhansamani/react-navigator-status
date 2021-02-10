@@ -38,10 +38,8 @@ const Alert: React.FC<{ isOnline: boolean }> = ({ isOnline }) => {
   React.useEffect(() => {
     let isMounted = true;
 
-    if (isOnline && showAlert) {
-      if (isMounted) {
-        setShowAlert(true);
-      }
+    if (isOnline && showAlert && isMounted) {
+      setShowAlert(true);
 
       setTimeout(() => {
         if (isMounted) {
@@ -90,7 +88,7 @@ const App = () => {
 };
 ```
 
-### With custom component
+### With render props
 
 - `NavigatorStatus` component gives you render prop with `isOnline` which you can use further to render alert as per your needs.
 
@@ -108,11 +106,9 @@ const Alert: React.FC<{ isOnline: boolean }> = ({ isOnline }) => {
   React.useEffect(() => {
     let isMounted = true;
 
-    if (isOnline && showAlert) {
-      if (isMounted) {
-        setShowAlert(true);
-      }
-
+    if (isOnline && showAlert && isMounted) {
+      setShowAlert(true);
+        
       setTimeout(() => {
         if (isMounted) {
           setShowAlert(false);
