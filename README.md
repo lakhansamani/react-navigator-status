@@ -3,6 +3,8 @@
 A component that lets you identify the user's internet connection and helps in notifying the user.
 Inspired by [react-detect-offline](https://www.npmjs.com/package/react-detect-offline) created this component, but instead of polling network status this component uses `online` and `offline` event listeners https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/Online_and_offline_events.
 
+![Demo](https://github.com/lakhansamani/react-navigator-status/blob/master/example/react-navigator-status-demo.gif)
+
 ## How to use?
 
 - `yarn add react-navigator-status`
