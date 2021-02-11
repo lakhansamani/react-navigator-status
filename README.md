@@ -5,6 +5,8 @@ Inspired by [react-detect-offline](https://www.npmjs.com/package/react-detect-of
 
 ![Demo](https://github.com/lakhansamani/react-navigator-status/blob/master/example/react-navigator-status-demo.gif)
 
+## [Demo](https://codesandbox.io/s/react-navigator-status-gi1gg?file=/src/App.js)
+
 ## How to use?
 
 - `yarn add react-navigator-status`
